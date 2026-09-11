@@ -17,6 +17,9 @@
     <link rel="canonical" href="https://ferramentaja.com.br/">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b1220">
+<link rel="apple-touch-icon" href="icons/icon-192x192.png">
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8301304005029830"
         crossorigin="anonymous"></script>
@@ -494,6 +497,15 @@
 
 </footer>
 
+<script>
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+            .then(() => console.log("PWA ativado"))
+            .catch(err => console.error("Erro no PWA:", err));
+    });
+}
+</script>
 
 </body>
 </html>
